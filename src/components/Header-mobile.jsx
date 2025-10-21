@@ -1,52 +1,32 @@
 import { NavLink } from 'react-router-dom';
 // import { setupThemeToggle } from '../assets/js/themeToggle.js';
 import React, { useEffect, useRef } from 'react';
-import HeaderMobile from './Header-mobile'
+import { useState } from 'react';
 
 
-function Header() {
+
+function HeaderMobile() {
   const toggleRef = useRef(null);
+  const [isClickedMenu, setIsClickedMenu] = useState(false);
 
-  useEffect(() => {
-    if (!toggleRef.current) return;
-
-    const themeIcon = toggleRef.current.querySelector('i');
-    if (!themeIcon) return;
-
-    const handleClick = () => {
-      document.body.classList.toggle('dark-mode');
-
-      const isDark = document.body.classList.contains('dark-mode');
-      themeIcon.classList.toggle('fa-moon', !isDark);
-      themeIcon.classList.toggle('fa-sun', isDark);
-      localStorage.setItem('darkMode', isDark);
-    };
-
-    toggleRef.current.addEventListener('click', handleClick);
-
-    // Apply saved preference
-    if (localStorage.getItem('darkMode') === 'true') {
-      document.body.classList.add('dark-mode');
-      themeIcon.classList.remove('fa-moon');
-      themeIcon.classList.add('fa-sun');
-    }
-
-    return () => {
-      toggleRef.current.removeEventListener('click', handleClick);
-    };
-  }, []);
+  const menuClick = () => {
+    setIsClickedMenu(true); // or toggle with !isClicked
+  };
 
 
   return (
-    <div id="Header">
+    <>
+    <div id="MobileHeader" className={isClickedMenu ? 'active' : ''}>
+      <div >
+        <nav id="navMobile">
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Projects</NavLink>
+          {/* <NavLink to="/upcoming" className={({ isActive }) => (isActive ? 'active' : '')}>Upcoming</NavLink> */}
+          <NavLink to="/background" className={({ isActive }) => (isActive ? 'active' : '')}>Background</NavLink>
+          <a target="_blank" href="https://buymeacoffee.com/maxyou200">Support Me</a>
+        </nav>
 
-      
-      <div className='HeaderDesktop'>
-        <div className="headerTop">
-          <div className="b1">
-            <div><h1>Airidas Videikis</h1></div>
-            <div><h2>FullStack/Web Developer</h2></div>
-          </div>
+        <div className='BottomHeader'>
+          
           <div className="b2">
             <a href="tel:+37062165966">
               <svg width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -55,7 +35,6 @@ function Header() {
                 <path fill="#0026bd" d="M348.696 393.736L292.344 321.6c-51.16-14.248-87.064-60.168-88.544-113.256l-56.352-72.096s-53.392 76.488 30.4 183.64 170.848 73.448 170.848 73.448z" />
                 <rect x="186.814" y="103.169" width="37.344" height="91.504" transform="matrix(0.7879 -0.6158 0.6158 0.7879 -48.1226 158.1244)" fill="#0026bd" />
               </svg>
-              <div>+37062165966</div>
             </a>
             <a href="https://t.me/+37062165966">
               <svg viewBox="0 0 256 256"  width="26" height="26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -64,7 +43,6 @@ function Header() {
                 <path fill="#6890ffff" d="M98.618 187.604s-1.54-.144-3.459-6.22c-1.918-6.075-11.67-38.049-11.67-38.049l77.537-49.24s4.477-2.718 4.317 0c0 0 .799.479-1.599 2.717-2.398 2.239-60.911 54.836-60.911 54.836z" />
                 <path fill="#B5CFE4" d="M122.902 168.115l-20.868 19.026s-1.631 1.238-3.416.462l3.996-35.341z" />
               </svg>
-              <div>Telegram </div>
             </a>
             <a href="mailto:airidasvideikis@gmail.com">
               <svg width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -74,28 +52,41 @@ function Header() {
                 <rect x="342.548" y="225.448" width="16" height="137.196" transform="matrix(-0.7863 0.6178 -0.6178 -0.7863 807.8576 308.6862)"   fill="#5a58e9ff" />
                 <polygon fill="#3b38ffff" points="126.032,352.944 113.424,343.056 198.208,235.168 210.8,245.04" />
               </svg>
-              <div>airidasvideikis@gmail.com</div>
-            </a>
-
+              </a>
           </div>
-  
+    
+          <div className="b1">
+            <div><h2>FullStack/Web Developer</h2></div>
+            <div><h1>Airidas Videikis</h1></div>
+          </div>
+
+        </div>
+
+        <div className='closeMenu' onClick={() => setIsClickedMenu(false)}>
+          &#x2715;
         </div>
         
-
-        
-        
-        <nav id="nav">
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Projects</NavLink>
-          {/* <NavLink to="/upcoming" className={({ isActive }) => (isActive ? 'active' : '')}>Upcoming</NavLink> */}
-          <NavLink to="/background" className={({ isActive }) => (isActive ? 'active' : '')}>Background</NavLink>
-          <a target="_blank" href="https://buymeacoffee.com/maxyou200">Support Me</a>
-        </nav>
       </div>
 
-      <HeaderMobile />
       
+
     </div>
+
+    <div className='HeaderMobile'>
+
+      <div>
+        <h3>Airidas Videikis</h3>
+      </div>
+
+      <div className="menuIcon" onClick={() => setIsClickedMenu(true)}> 
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+    </div>
+    </>
   )
 }
 
-export default Header;
+export default HeaderMobile;

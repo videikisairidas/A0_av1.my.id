@@ -1,0 +1,81 @@
+{
+    "workExperience": [
+        { 
+            "id": 0,
+            "title": "Fullstack/wordpress Developer",
+            "company": "Studio 116 digital",
+            "duration": "2019",
+            "description": "Worked on various web development projects using WordPress and custom PHP solutions. Responsibilities included theme customization, and website optimization for performance and SEO. Designed and implemented user-friendly interfaces and ensured cross-browser compatibility."
+        },
+        {
+            "id": 1,
+            "title": "Self-Employed Developer",
+            "company": "------",
+            "duration": "2017 - present",
+            "description": "Focused on building and maintaining applications, websites, and tools for personal projects and freelance clients. Technologies used include C#, PHP(laravel), JavaScript, and Python."
+        }
+    ],
+    
+    "education": [
+        {
+            "id": 1,
+            "title": "Software engineering",
+            "company": "Vilnius College",
+            "duration": "2022 - 2026",
+            "description": "Currently pursuing a degree in Software Engineering, focusing on modern software development practices and technologies."
+        },
+        {
+            "id": 2,
+            "title": "Python EDIBO bootcamp",
+            "company": "EDIBO",
+            "duration": "2021",
+            "description": "An intensive bootcamp covering Python programming, web development with Django, and database management. (hmtl, css, js basics included), api, rest api."
+        }
+    ],
+    "extraLearning": [
+        {
+            "id": 1,
+            "source": "Udemy",
+            "title": "Advanced React",
+            "description": "Mastered state management patterns and performance optimization."
+        },
+        {
+            "id": 2,
+            "source": "YouTube (Programming with Mosh)",
+            "title": "C#, .NET Core, React, Python, others ",
+            "description": "Learning everyday new technologies and best practices."
+        },
+        {
+            "id": 3,
+            "source": "Hackerrank",
+            "title": "Platform for practicing coding skills, and solving challenges",
+            "description": "Improved problem-solving skills and algorithmic thinking."
+        },
+        {
+            "id": 4,
+            "source": "Youtube freecodecamp.org",
+            "title": "Harvard CS50's and programming courses",
+            "description": "Comprehensive understanding of computer science fundamentals. Learned C, Python, web development, and algorithms."
+        }
+    ],
+
+    "skills": [
+        "HTML", "CSS", "JavaScript",
+        "PHP", "Laravel",
+        "C#", ".NET",
+        "Python", "Django",
+        "Node.js", "React",
+        "SQL", "MYSQL", "PostgreSQL", "testing/debugging",
+        "Git", "Linux", "Hosting Managing", "Nginx", "VPS"
+    ],
+    "otherSkills": {
+            "driving": {
+            "title": "Driving Skill 🚗",
+            "description": "Full, clean license (Category B). Comfortable with long-distance travel and navigating diverse city environments."
+        },
+            "languages": {
+            "title": "Languages 🗣️",
+            "description": "Primary: Lithuanian (Native);  Secondary: English (Fluent/Professional Working Proficiency)."
+        }
+    }
+}

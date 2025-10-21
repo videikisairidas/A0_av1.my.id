@@ -26,6 +26,7 @@ input, button, textarea, select {
 
 .b1 h2 {
   font-size: 12px;
+  text-align: left;
 }
 
 #Header {
@@ -38,15 +39,7 @@ input, button, textarea, select {
   margin: 0 auto;
   padding: 0 20px;
 }
-#Header * {
-  color: white;
-}
 
-@media (min-width: 600px) {
-  .menuIcon {
-    display: none;
-  }
-}
 .menuIcon div {
   height: 2px;
   width: 20px;
@@ -101,6 +94,7 @@ input, button, textarea, select {
 .b2 a > div {
   display: none;
   top: 100%;
+  color: white;
   left: -60px;
   position: absolute;
   background-color: rgb(56, 33, 161);
@@ -144,6 +138,126 @@ input, button, textarea, select {
   color: #ffffff;
 }
 
+@media screen and (max-width: 600px) {
+  .HeaderDesktop {
+    display: none;
+  }
+}
+#Header #MobileHeader {
+  background: #0e141e;
+  padding: 0px 0px;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgb(22, 22, 22);
+  transition: left 0.3s ease-in-out;
+}
+#Header #MobileHeader > div {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+#navMobile {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+#navMobile > a {
+  width: 100%;
+  margin: 0px 0;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  color: #ffffff;
+}
+#navMobile > a:hover {
+  color: rgb(255, 112, 112);
+  border-bottom: 1px solid rgb(255, 112, 112);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.BottomHeader {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 10px;
+  left: 0;
+}
+.BottomHeader .b2 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.BottomHeader .b1 {
+  text-align: center;
+  margin: 10px 0;
+}
+.BottomHeader .b1 h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.BottomHeader .b1 h2 {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+.closeMenu {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.closeMenu:hover {
+  color: red;
+}
+
+.HeaderMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  transition: left 0.3s ease-in-out;
+}
+.HeaderMobile > div {
+  color: white;
+}
+.HeaderMobile .menuIcon {
+  cursor: pointer;
+}
+.HeaderMobile .menuIcon > div {
+  background-color: white;
+}
+
+#Header #MobileHeader.active {
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 601px) {
+  #Header #MobileHeader, .HeaderMobile {
+    display: none;
+  }
+}
+#Footer {
+  background-color: rgb(34, 34, 34);
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  color: rgb(223, 223, 223);
+}
+
 .ProjectPage > div {
   max-width: 1000px;
   margin: 0 auto;
@@ -157,18 +271,22 @@ input, button, textarea, select {
 }
 
 #ProjectPage h2 {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 20px auto 0;
   padding: 20px;
+  color: white;
+  background: linear-gradient(135deg, #4aa3f7, rgba(230, 109, 149, 0.768627451));
 }
 #ProjectPage > div {
   display: flex;
   flex-wrap: wrap;
 }
 
-.projects-container {
+.projects-container, .games-container {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .Project-card {
@@ -177,7 +295,6 @@ input, button, textarea, select {
   padding: 14px;
   background: white;
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 5px 15px var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -212,7 +329,7 @@ input, button, textarea, select {
   color: #4a6cf7;
 }
 
-#live-section .server-offline {
+#live-section .server-block, #dev-section .server-block {
   background-color: rgba(53, 220, 123, 0.1);
   border-left: 3px #16a145 solid;
   margin: 5px 0;
@@ -225,26 +342,409 @@ input, button, textarea, select {
   font-size: 0.75rem;
   font-weight: 500;
 }
-#live-section .server-offline > i {
+#live-section .server-block > i, #dev-section .server-block > i {
   color: #16a145;
 }
-#live-section .server-offline > strong {
+#live-section .server-block > strong, #dev-section .server-block > strong {
   color: #16a145;
 }
-#live-section .server-offline > a {
+#live-section .server-block > a, #dev-section .server-block > a {
   color: #3c39eb;
   text-decoration: none;
   font-weight: 800;
 }
 
-#live-section .server-offline:hover {
-  background-color: rgba(220, 53, 69, 0.2);
-  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+#live-section .server-block:hover {
+  background-color: rgba(33, 141, 78, 0.199);
+  box-shadow: 0 2px 8px rgba(18, 75, 41, 0.582);
 }
-#live-section .server-offline:hover > a:hover {
+#live-section .server-block:hover > i {
+  color: #107732;
+}
+#live-section .server-block:hover > strong {
+  color: #107732;
+}
+#live-section .server-block:hover > a:hover {
   color: red;
 }
 
+#dev-section .server-block {
+  background-color: rgba(236, 192, 133, 0.445);
+  box-shadow: 0 2px 8px rgba(248, 194, 79, 0.3);
+  border-left: 3px #690000 solid;
+}
+#dev-section .server-block > i {
+  color: #6e4117;
+}
+#dev-section .server-block > strong {
+  color: #6e4117;
+}
+#dev-section .server-block > a {
+  color: #ec1414;
+}
+#dev-section .server-block:hover {
+  background-color: rgba(230, 159, 66, 0.637);
+  box-shadow: 0 2px 8px rgba(228, 167, 35, 0.651);
+}
+#dev-section .server-block:hover > i {
+  color: #6e4117;
+}
+#dev-section .server-block:hover > strong {
+  color: #6e4117;
+}
+#dev-section .server-block:hover > a {
+  color: #ec1414;
+}
+#dev-section .server-block > a:hover {
+  color: rgb(0, 17, 255);
+}
+
+.modern-button {
+  width: 180px;
+  margin: 0 auto;
+  padding: 12px 8px;
+  max-height: 48px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modern-button2 {
+  margin-left: 10px;
+  background-color: #ee6746;
+}
+
+.modern-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.modern-button2:hover {
+  background-color: #a8361f;
+}
+
+.modern-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.Project-card:hover .extraCard {
+  display: flex;
+}
+
+.extraCard {
+  display: none;
+  position: absolute;
+  padding: 10px 8px;
+  top: -30px;
+  right: -30px;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  background: rgba(255, 119, 77, 0.678);
+  border-radius: 20px;
+  font-weight: 600;
+}
+.extraCard > div {
+  margin-left: 4px;
+  color: black;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* The container must be positioned relative: */
+.ProjectPage select {
+  /* Reset */
+  margin-right: 20px;
+  margin-bottom: 10px;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 9rem;
+  padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+  font-weight: 700;
+  background: var(--arrow-icon) no-repeat right 0.8em center/1.4em, linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  background: linear-gradient(35deg, rgba(255, 166, 166, 0.486), rgba(170, 3, 170, 0.603));
+  color: rgb(22, 22, 22);
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  /* Remove focus outline */
+  /* <option> colors */
+}
+.ProjectPage select::-ms-expand {
+  display: none;
+}
+.ProjectPage select:focus {
+  outline: none;
+}
+.ProjectPage select option {
+  color: inherit;
+  background-color: var(--option-bg);
+}
+
+@media screen and (max-width: 768px) {
+  .containerProjectsHeader > * {
+    color: #fff;
+    font-size: 20px;
+  }
+  .Project-card {
+    width: 46%;
+    margin: 0 2% 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .containerProjectsHeader > * {
+    color: #fff;
+    font-size: 30px;
+  }
+  .Project-card {
+    width: 96%;
+    margin: 0 2% 20px;
+  }
+}
+/* Base Styles */
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #28a745; /* Green */
+  --background-light: #f4f7f6;
+  --card-background: #ffffff;
+  --text-dark: #333;
+  --text-light: #555;
+  --border-color: #dee2e6;
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.background-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 20px;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+/* Section Styling */
+.section {
+  padding: 40px 0;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-icon {
+  font-size: 1.5em;
+  margin-right: 15px;
+  color: var(--secondary-color);
+}
+
+/* --- TIMELINE SECTION --- */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* The vertical line */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* Placement on the left side */
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+/* Placement on the right side */
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+/* The dot/marker */
+.timeline-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: var(--secondary-color);
+  border: 3px solid var(--card-background);
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the dot to the right for left items */
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -8px;
+}
+
+/* Place the dot to the left for right items */
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -8px;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  position: relative;
+}
+
+.timeline-content h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.timeline-content .subtitle {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 5px 0;
+}
+
+.timeline-content .duration {
+  color: var(--text-light);
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 5px;
+}
+
+/* --- SKILLS CLOUD --- */
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  background-color: var(--secondary-color);
+}
+
+/* --- EXTRA LEARNING & OTHER SKILLS --- */
+.learning-grid, .other-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.learning-card, .other-skill-box {
+  background: var(--card-background);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-light);
+  border-left: 5px solid var(--secondary-color);
+}
+
+.learning-card h4, .other-skill-box h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.source-tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: var(--text-light);
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+/* --- Responsive Design for Timeline --- */
+@media screen and (max-width: 600px) {
+  /* Hide the line that separates left/right */
+  .timeline::after {
+    left: 20px;
+  }
+  /* Make all items take full width */
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+  /* Reset position */
+  .timeline-item:nth-child(even), .timeline-item:nth-child(odd) {
+    left: 0;
+  }
+  /* Place dot on the new line */
+  .timeline-item:nth-child(odd) .timeline-dot {
+    left: 12px;
+  }
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 12px;
+  }
+}
 * {
   margin: 0;
   padding: 0;

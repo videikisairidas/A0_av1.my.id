@@ -1,9 +1,12 @@
 @use "./extra/normalize";
 @use "./extra/variables" as *;
 @use "./header";
+@use "./header-mobile";
 @use "./footer";
 @use "./page/projects";
-@use "./page/skills";
+@use "./page/background";
+
+
 
 
 * {

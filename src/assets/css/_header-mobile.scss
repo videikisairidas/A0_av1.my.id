@@ -1,0 +1,110 @@
+@use "./extra/variables" as *;
+
+
+#Header #MobileHeader {
+    background: $header-background-color;
+    padding: 0px 0px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgb(22, 22, 22);
+    transition: left 0.3s ease-in-out;
+    >div {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 0px;;
+    }
+    
+}
+#navMobile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 10px 0;
+    // border: 2px solid white;
+    > a {
+        width: 100%;
+        margin:0px 0;
+        padding: 10px 10px;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+        color: #ffffff;
+        &:hover {
+            color:rgb(255, 112, 112);
+            border-bottom: 1px solid rgb(255, 112, 112);
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+}
+.BottomHeader {
+    position: absolute;
+    width: 100%;
+    // border: 2px solid white;
+    margin: 0 auto;
+    bottom: 10px;
+    left: 0;
+    .b2 {
+        margin: 0;
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+    }   
+    .b1 {
+        text-align: center;
+        margin: 10px 0;
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        h2 {
+            font-size: 16px;
+            text-align: center;
+            margin: 0;
+            font-weight: normal;
+            opacity: 0.8;
+        }
+    }
+}
+
+.closeMenu {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    &:hover {
+        color: red;
+    }
+}   
+.HeaderMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    transition: left 0.3s ease-in-out;
+    > div {
+        color: white;
+        
+    }
+    .menuIcon {
+        cursor: pointer;
+        > div {
+            background-color: white;
+        }
+    }
+}
+#Header #MobileHeader.active {
+    left: 0;
+    transition: left 0.3s ease-in-out;
+}
+@media screen and (min-width: 601px) {
+    #Header #MobileHeader, .HeaderMobile {
+        display: none;
+    }
+}

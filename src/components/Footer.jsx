@@ -2,7 +2,7 @@
 function Footer() {
   return (
     <div id="Footer">
-      Footer
+      Airidas Videikis © 2025
     </div>
   )
 }

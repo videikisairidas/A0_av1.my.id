@@ -1,47 +1,47 @@
 [
   {
     "id": 1,
-    "title": "Project Alpha",
-    "description": "A cool project about AI."
-  },
+    "title": "Games Account API",
+    "description": "A competitive gaming platform where users can play various games, join or create tournaments, and compete in battle bracket-style challenges. The platform promotes skill-based competition, tracks player rankings, and offers an engaging experience through real-time matchups and leaderboard systems.",
+    "stack": [
+      "C#",
+      "PostgreSQL",
+      "React",
+      "Flutter",
+      "API"
+    ],
+    "live" : {
+      "Users Web" : "",
+      "Mobile App": "",
+      "C# Api": ""
+    },
+    "dev": {
+      "Admin Panel": "",
+      "Users Web" : "",
+      "Mobile App": ""
+    },
+    "status": "Coming soon",
+    "year": "2025"
+  }, 
   {
     "id": 2,
-    "title": "Project Beta",
-    "description": "A web app for productivity."
-  },
-  {
-    "id": 3,
-    "title": "Project Gamma",
-    "description": "A mobile-first design system."
-  },
-  {
-    "id": 4,
-    "title": "Project Delta",
-    "description": "A blockchain-based ledger."
-  },
-  {
-    "id": 5,
-    "title": "Project Epsilon",
-    "description": "A VR experience."
-  },
-  {
-    "id": 6,
-    "title": "Project Zeta",
-    "description": "An IoT dashboard."
-  },
-  {
-    "id": 7,
-    "title": "Project Eta",
-    "description": "A chatbot assistant."
-  },
-  {
-    "id": 8,
-    "title": "Project Theta",
-    "description": "A game engine prototype."
-  },
-  {
-    "id": 9,
-    "title": "Project Iota",
-    "description": "A social media analyzer."
+    "title": "Chess Game",
+    "description": "A web-based chess game allowing users to play against each other online. (and offline vs computer)",
+    "stack": [
+      "C#",
+      "Flutter",
+      "PostgreSQL",
+      "API"
+    ],
+    "live" : {
+      "Users Web" : "",
+      "Mobile App": ""
+    },
+    "dev": {
+      "Users Web" : "",
+      "Mobile App": ""
+    },
+    "status": "Coming soon",
+    "year": "2025"
   }
 ]

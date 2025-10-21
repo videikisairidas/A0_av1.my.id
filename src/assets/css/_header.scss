@@ -2,6 +2,7 @@
 
 .b1 h2 {
     font-size: 12px;
+    text-align: left;
 }
 #Header {
     background: $header-background-color;
@@ -12,14 +13,7 @@
         margin: 0 auto;
         padding: 0 20px;;
     }
-    & * {
-        color: white;
-    }
-}
-@media (min-width: 600px) {
-    .menuIcon {
-        display: none;
-    }
+
 }
 
 
@@ -77,6 +71,7 @@
             display: none;
             top: 100%;
             // right: 50%;
+            color: white;
             left: -60px;
             position: absolute;
             background-color: rgb(56, 33, 161);
@@ -122,3 +117,10 @@
         color: #ffffff;
     }
 }
+@media screen and  (max-width: 600px) {
+    .HeaderDesktop {
+        display: none;
+    }
+}
+
+

@@ -4,77 +4,113 @@
     "title": "Ai Art Competition Project",
     "description": "Ai generated images platform and community that gamifies photo sharing. people can upload their images, join themed challenges, and receive votes from other members. The platform works like a game — users earn points, ranks, and badges based on participation and how well their photos perform in competitions.",
     "stack": [
-      "Laravel",
-      "VueJS",
-      "MySQL",
-      "TailwindCSS"
+      "PHP Laravel",
+      "PostgreSQL",
+      "Api"
     ],
     "live" : {
-      "Admin Panel": "https://admin.av1.my.id",
-      "Users Web" : "https://av1.my.id",
-      "Mobile App": "https://play.google.com/store/apps/details?id=id.av1.app",
-      "Laravel API": "https://api.av1.my.id"
+      "Users Web" : "",
+      "Mobile App": ""
     },
     "dev": {
-      "Admin Panel": "https://admin.av1.my.id",
-      "Users Web" : "https://av1.my.id",
-      "Laravel API": "https://api.av1.my.id"
-    }
+      "Admin Panel": "https://ai-art-competition.av1.my.id/login",
+      "Users Web" : "https://ai-art-competition.av1.my.id",
+      "Mobile App": ""
+    },
+    "status": "In Progress",
+    "year": "2025"
   },
   {
     "id": 2,
-    "title": "Project Beta",
-    "info" : {
-        "Laravel Views Admin Panel": "https://github.com/username/project-alpha",
-        "Laravel Users Web" : "2222",
-        "Mobile App": "",
-        "Laravel API": ""
+    "title": "Table orders app + barcode ",
+    "description": "You can view the full menu, place your table order, and even pay your bill instantly by simply scanning the QR code or barcode right on your table. It's faster, more accurate, and puts you in control of your dining experience. Perfect for busy restaurants, bars, and food courts",
+    "stack": [
+      "PHP Laravel",
+      "MySQL",
+      "Barcode"
+    ],
+    "dev": {
+      "Admin Panel": "https://ai-art-competition.av1.my.id/login",
+      "Users Web" : "https://ai-art-competition.av1.my.id"
     },
-    "description": "A web app for productivity."
-  },
+    "status": "Coming Soon",
+    "year": "2025"
+  }, 
   {
     "id": 3,
-    "title": "Project Gamma",
-    "info" : {
-        "Laravel Views Admin Panel": "https://github.com/username/project-alpha",
-        "Laravel Users Web" : "2222",
-        "Mobile App": "",
-        "Laravel API": ""
+    "title": "Build Deals. Build Trust. Verified.",
+    "description": "Tired of uncertainty when making deals online? TrustApp is the dedicated platform where you can confidently make deals, knowing who you're working with. We replace guesswork with proven trust. Every transaction or interaction is followed by a mutual rating system, creating a public-facing Trust Score for every user. See a person's history of reliable deals and service before you commit.",
+    "stack": [
+      "PHP Laravel",
+      "MySQL",
+      "Flutter",
+      "Api"
+    ],
+    "live" : {
+      "Users Web" : "",
+      "Mobile App": ""
     },
-    "description": "A mobile-first design system."
+    "dev": {
+      "Admin Panel": "",
+      "Users Web" : "",
+      "Mobile App": ""
+    },
+    "status": "Coming Soon",
+    "year": "2025"
   },
   {
     "id": 4,
-    "title": "Project Delta",
-    "info" : {
-        "Laravel Views Admin Panel": "https://github.com/username/project-alpha",
-        "Laravel Users Web" : "2222",
-        "Mobile App": "",
-        "Laravel API": ""
+    "title": "MatchMaker 2026",
+    "description": "the dating app designed for the 2026 standard—where intentionality and authenticity replace endless swiping. We believe great love shouldn't be left to chance, but that a touch of serendipity (your lucky word) helps guide the way. MatchMAker 2026 moves beyond surface-level photos and focuses on how people actually connect. We prioritize voice, video, and values to ensure your first date is a step forward, not a step back.",
+    "stack": [
+      "PHP Laravel",
+      "MySQL",
+      "Api",
+      "Flutter"
+    ],
+    "dev": {
+      "Admin Panel": "",
+      "Users Web" : "",
+      "Mobile App": ""
     },
-    "description": "A blockchain-based ledger."
+    "status": "Coming Soon",
+    "year": "2025"
   },
   {
     "id": 5,
-    "title": "Project Epsilon",
-    "info" : {
-        "Laravel Views Admin Panel": "https://github.com/username/project-alpha",
-        "Laravel Users Web" : "2222",
-        "Mobile App": "",
-        "Laravel API": ""
+    "title": "E-SHOP",
+    "description": "An eShop platform designed for modern online shopping, offering a seamless browsing, cart, and checkout experience. Users can explore products, manage orders, and enjoy secure, convenient transactions through an intuitive and responsive interface.",
+    "stack": [
+      "PHP Laravel",
+      "MySQL",
+      "Api",
+      "Flutter"
+    ],
+    "dev": {
+      "Admin Panel": "",
+      "Users Web" : "",
+      "Mobile App": ""
     },
-    "description": "A VR experience."
+    "status": "Coming Soon",
+    "year": "2025"
   },
   {
     "id": 6,
-    "title": "Project Zeta",
-    "info" : {
-        "Laravel Views Admin Panel": "https://github.com/username/project-alpha",
-        "Laravel Users Web" : "2222",
-        "Mobile App": "",
-        "Laravel API": ""
+    "title": "HTX DESKTOP windows",
+    "description": "This application is a dedicated, native desktop trading terminal built using Flutter, designed to leverage the comprehensive features of the HTX (formerly Huobi) cryptocurrency exchange API. It aims to provide traders with a fast, responsive, and customizable tool for real-time market monitoring, trade execution, and account management, all from a single codebase across major desktop operating systems.",
+    "stack": [
+      "API",
+      "Flutter"
+    ],
+    "dev": {
+      "Admin Panel": "",
+      "Users Web" : "",
+      "Mobile App": ""
     },
-    "description": "An IoT dashboard."
+    "status": "Coming Soon",
+    "year": "2026"
   }
+  
+
 
 ]
