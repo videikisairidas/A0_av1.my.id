@@ -87,6 +87,7 @@ function Header() {
         <nav id="nav">
           <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Projects</NavLink>
           {/* <NavLink to="/upcoming" className={({ isActive }) => (isActive ? 'active' : '')}>Upcoming</NavLink> */}
+          <a href="https://airidasvideikis.medium.com/" target="_blank">Mobile</a>
           <NavLink to="/background" className={({ isActive }) => (isActive ? 'active' : '')}>Background</NavLink>
           <a target="_blank" href="https://buy.stripe.com/aFa7sL4MpaAzfEbaaPeZ201">Support Me</a>
         </nav>

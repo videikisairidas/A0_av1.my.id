@@ -18,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Projects />} />
         <Route path="/projects" element={<Projects />} />
+    
         <Route path="/background" element={<Background />} />
       </Routes>
 
